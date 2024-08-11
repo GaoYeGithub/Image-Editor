@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" integrity="sha384-3fdgwJw17Bi87e1QQ4fsLn4rUFqWw//KU0g8TvV6quvahISRewev6/EocKNuJmEw" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Image Editor</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!--Section #1-->
+        <div class="row">
+            <div class="col-md-12 text-center mb-3 mt-3">
+                <form id="imgurl">
+                    <input type="text" placeholder="Image URL" id="onlineurl" class="form-control d-inline-block w-75">
+                    <button type="submit" class="btn btn-primary">Change Image</button>
+                </form>
+            </div>
+        </div>
+      
+        <!--Section #2-->
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="https://assets.hackclub.com/flag-orpheus-top.svg" id="targetimage" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+
+        <!--Section #3-->
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 p-2 text-center" id="section_three">
+                <h3>Image Filters</h3>
+                <form id="slider-form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <label for="gs" class="fa fa-adjust"></label>
+                                <input id="gs" name="gs" type="range" min="0" max="100" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="blur" class="fa fa-assistive-listening-systems"></label>
+                                <input id="blur" name="blur" type="range" min="0" max="10" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="hue-rotate" class="fa fa-circle-o-notch fa-spin"></label>
+                                <input id="hue-rotate" name="hue-rotate" type="range" min="0" max="360" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="sepia" class="fa fa-balance-scale"></label>
+                                <input id="sepia" name="sepia" type="range" min="0" max="100" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="invert" class="fa fa-reply"></label>
+                                <input id="invert" name="invert" type="range" min="0" max="100" value="0" class="slider">
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <label for="brightness" class="fa fa-sun-o"></label>
+                                <input id="brightness" name="brightness" type="range" min="0" max="200" value="100" class="slider">
+                            </p>
+                            <p>
+                                <label for="contrast" class="fa fa-adjust"></label>
+                                <input id="contrast" name="contrast" type="range" min="0" max="200" value="100" class="slider">
+                            </p>
+                            <p>
+                                <label for="opacity" class="fa fa-eye"></label>
+                                <input id="opacity" name="opacity" type="range" min="0" max="100" value="100" class="slider">
+                            </p>
+                            <p>
+                                <label for="saturate" class="fa fa-tint"></label>
+                                <input id="saturate" name="saturate" type="range" min="0" max="200" value="100" class="slider">
+                            </p>
+                        </div>
+                    </div>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
